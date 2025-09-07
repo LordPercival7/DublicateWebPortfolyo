@@ -9,7 +9,7 @@ export const About: React.FC = () => {
     { icon: Code, value: '8+', label: t('about.stats.projects') },
     { icon: Cpu, value: '2025', label: t('about.stats.graduate') },
     { icon: Zap, value: '10+', label: t('about.stats.technologies') },
-    { icon: Award, value: '2.71', label: t('about.stats.gpa') },
+    { icon: Award, value: '4.00', label: t('about.stats.gpa') },
   ];
 
 
