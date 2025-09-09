@@ -69,6 +69,8 @@ export const ContactForm: React.FC = () => {
 
     if (!formData.name.trim()) {
       newErrors.name = t('contact.nameRequired');
+    } else if (formData.name.trim().length < 2) {
+      newErrors.name = 'İsim en az 2 karakter olmalıdır.'; // Bu mesajı da LanguageContext'e ekleyebilirsiniz.
     }
 
     if (!formData.email.trim()) {
@@ -79,14 +81,18 @@ export const ContactForm: React.FC = () => {
 
     if (!formData.subject.trim()) {
       newErrors.subject = t('contact.subjectRequired');
+    } else if (formData.subject.trim().length < 5) {
+      newErrors.subject = 'Konu en az 5 karakter olmalıdır.'; // Bu mesajı da LanguageContext'e ekleyebilirsiniz.
     }
 
     if (!formData.message.trim()) {
       newErrors.message = t('contact.messageRequired');
+    } else if (formData.message.trim().length < 10) {
+      newErrors.message = 'Mesaj en az 10 karakter olmalıdır.'; // Bu mesajı da LanguageContext'e ekleyebilirsiniz.
     }
     
     if (!recaptchaToken) {
-      newErrors.recaptcha = 'reCAPTCHA doğrulaması gerekli.';
+      newErrors.recaptcha = t('contact.recaptchaRequired'); // Düzeltme: Yeni çeviri anahtarı kullanıldı
     }
 
     setErrors(newErrors);
@@ -107,13 +113,13 @@ export const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     if (!validateForm()) {
-      addNotification('error', t('contact.generalError')); // Düzeltme yapıldı: Hata mesajı çevirisi eklendi
+      addNotification('error', t('contact.generalError'));
       setIsSubmitting(false);
       return;
     }
 
     if (!recaptchaToken) {
-      addNotification('error', 'reCAPTCHA doğrulaması gerekli.');
+      addNotification('error', t('contact.recaptchaRequired'));
       setIsSubmitting(false);
       return;
     }
@@ -277,7 +283,7 @@ export const ContactForm: React.FC = () => {
             
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="6LfFwr8rAAAAAA-A5O_qOw7nTtkCbVIrfMXYxOCJ" // <<< BURAYI KENDİ SİTE ANAHTARINIZLA DEĞİŞTİRİN
+              sitekey="YOUR_SITE_KEY" // <<< BURAYI KENDİ SİTE ANAHTARINIZLA DEĞİŞTİRİN
               onChange={onRecaptchaChange}
             />
             
