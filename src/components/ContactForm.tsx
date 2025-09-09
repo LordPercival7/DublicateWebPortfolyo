@@ -277,7 +277,7 @@ export const ContactForm: React.FC = () => {
             
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="YOUR_SITE_KEY" // <<< BURAYI KENDİ SİTE ANAHTARINIZLA DEĞİŞTİRİN
+              sitekey="6LfFwr8rAAAAAA-A5O_qOw7nTtkCbVIrfMXYxOCJ" // <<< BURAYI KENDİ SİTE ANAHTARINIZLA DEĞİŞTİRİN
               onChange={onRecaptchaChange}
             />
             
