@@ -1,5 +1,5 @@
 import React from 'react';
-import { Heart, Github, Linkedin, Mail, ArrowUp } from 'lucide-react';
+import { Heart, Github, Linkedin, Mail, ArrowUp, Rocket } from 'lucide-react';
 
 export const Footer: React.FC = () => {
   const scrollToTop = () => {
@@ -100,9 +100,9 @@ export const Footer: React.FC = () => {
         <div className="container mx-auto px-6 py-6">
           <div className="flex flex-col md:flex-row justify-between items-center">
             <div className="flex items-center text-gray-400 mb-4 md:mb-0">
-              <span>© {currentYear} Burak Gökçek. Made with</span>
-              <Heart className="w-4 h-4 mx-2 text-red-500" />
-              <span>and cutting-edge technology.</span>
+              <span>© {currentYear} Burak Gökçek. With the finesse of engineering and the power of technology</span>
+<Rocket className="w-4 h-4 mx-2 text-red-500" />
+<span>&emsp;|&emsp; © Tüm Hakları Saklıdır. </span>
             </div>
             
             <button

@@ -39,6 +39,24 @@ import ArrayPoster from '../assets/Array Antenna/Array_Poster.png';
 import ArraySon1 from '../assets/Array Antenna/Array_son1.gif';
 import LibraryPatch from '../assets/Array Antenna/libraryPatch Antenna Array_01.gif';
 import Pattern1 from '../assets/Array Antenna/pattern1.png';
+import HpFilterPCB1 from '../assets/Lp and Hp Filter/Hp_Filter_PCB1.png';
+import HpFilterPCB2 from '../assets/Lp and Hp Filter/Hp_Filter_PCB2.png';
+import HpFilterSheet from '../assets/Lp and Hp Filter/Hp_Filter_Sheet.png';
+import LpFilterPCB1 from '../assets/Lp and Hp Filter/Lp_Filter_PCB1.png';
+import LpFilterPCB2 from '../assets/Lp and Hp Filter/Lp_Filter_PCB2.png';
+import LpFilterSheet from '../assets/Lp and Hp Filter/Lp_Filter_Sheet.png';
+import BuckPCB1 from '../assets/Buck and Boost Conv/Buck_PCB1.jpg';
+import BuckPCB2 from '../assets/Buck and Boost Conv/Buck_PCB2.jpg';
+import BuckSheet from '../assets/Buck and Boost Conv/Buck_Sheet.jpg';
+import BoostPCB1 from '../assets/Buck and Boost Conv/Boost_PCB1.jpg';
+import BoostPCB2 from '../assets/Buck and Boost Conv/Boost_PCB2.jpg';
+import BoostSheet from '../assets/Buck and Boost Conv/Boost_Sheet.jpg';
+import ACDCadaptorPCB1 from '../assets/ACDCadaptor/ACDCadaptor_PCB1.jpg';
+import ACDCadaptorPCB2 from '../assets/ACDCadaptor/ACDCadaptor_PCB2.jpg';
+import ACDCadaptorSheet from '../assets/ACDCadaptor/ACDCadaptor_Sheet.jpg';
+import STMRelayPcb1 from '../assets/STM Relay/STMRelay_Pcb1.png';
+import STMRelayPcb2 from '../assets/STM Relay/STMRelay_Pcb2.png';
+import STMRelaySheet from '../assets/STM Relay/STMRelay_Sheet.png';
 
 interface Project {
   id: string;
@@ -187,7 +205,70 @@ export const Projects: React.FC = () => {
         LibraryPatch,
         Pattern1
       ]
-    }
+    },
+    {
+  id: 'lp-hp-filter',
+  title: t('projects.lpHpFilter.title'),
+  category: t('projects.pcb'),
+  technologies: ['Altium Designer', 'PCB design'],
+  description: t('projects.lpHpFilter.description'),
+  features: t('projects.lpHpFilter.features'),
+  image: HpFilterPCB2,
+  gallery: [
+    HpFilterPCB2,
+    HpFilterPCB1,
+    HpFilterSheet,
+    LpFilterPCB1,
+    LpFilterPCB2,
+    LpFilterSheet,
+  ]
+},
+    {
+  id: 'buck-boost-converter',
+  title: t('projects.buckBoost.title'),
+  category: t('projects.pcb'),
+  technologies: ['Altium Designer', 'Power Electronics', 'Simülasyon'],
+  description: t('projects.buckBoost.description'),
+  features: t('projects.buckBoost.features'),
+  image: BuckPCB2, // Proje kartında görünecek ana görsel
+  gallery: [
+    BuckPCB2,
+    BuckPCB1,
+    BuckSheet,
+    BoostPCB1,
+    BoostPCB2,
+    BoostSheet
+  ]
+},
+    {
+  id: 'ac-dc-adaptor',
+  title: t('projects.acDcAdaptor.title'),
+  category: t('projects.pcb'),
+  technologies: ['Altium Designer', 'SMPS Design', 'Flyback Topology'],
+  description: t('projects.acDcAdaptor.description'),
+  features: t('projects.acDcAdaptor.features'),
+  image: ACDCadaptorPCB1,
+  gallery: [
+    ACDCadaptorPCB1,
+    ACDCadaptorPCB2,
+    ACDCadaptorSheet
+  ]
+},
+    {
+  id: 'stm-relay-control',
+  title: t('projects.stmRelay.title'),
+  category: t('projects.pcb'),
+  technologies: ['STM32', 'Relay Control', 'Wireless Communication', 'PCB Design', 'Altium Designer'],
+  description: t('projects.stmRelay.description'),
+  features: t('projects.stmRelay.features'),
+  image: STMRelayPcb1,
+  gallery: [
+    STMRelayPcb1,
+    STMRelayPcb2,
+    STMRelaySheet
+  ]
+}
+  
   ];
 
   const categories = [t('common.all'), t('projects.pcb'), t('projects.embedded'), t('projects.software'), t('projects.antenna')];

@@ -31,8 +31,8 @@ export const Certificates: React.FC = () => {
       date: '2025',
       category: 'Mesleki Gelişim',
       description: 'Su altı araçlarının tasarımı ve mühendisliğine odaklanan kapsamlı bir eğitim. Bu eğitimde, tasarım kriterleri, sistem bileşenleri, çevresel faktörler ve operasyonel gereksinimler gibi konulara dikkat edilerek su altı sistemlerinin nasıl geliştirileceği üzerine bilgi edindim.',
-      image: 'https://scontent.fsaw3-1.fna.fbcdn.net/v/t51.82787-15/532432707_18203553577307870_6469722007261703549_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=6ipKlzCLi8AQ7kNvwFNL-A3&_nc_oc=AdkSA29_5DdI4nzHaw0NMwtQYmRbcLhI21fXMvY9ylNP9Fp8kCN4eSMngLyE8g-211c&_nc_zt=23&_nc_ht=scontent.fsaw3-1.fna&_nc_gid=C2buQKQWnNBG0monWeNkNQ&oh=00_AfbI9a9FOCzJ46IvzI4ewvooKuAVW-9cntxD35aEUo0c1A&oe=68BEB080'
-    },
+      image: '/sertifika/Sualti.png'
+},
     {
       id: 'university-career',
       title: 'Kariyer ve Yetkinlik Buluşmaları',

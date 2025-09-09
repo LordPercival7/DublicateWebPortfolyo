@@ -6,10 +6,10 @@ export const About: React.FC = () => {
   const { t } = useLanguage();
   
   const stats = [
-    { icon: Code, value: '8+', label: t('about.stats.projects') },
+    { icon: Code, value: '12+', label: t('about.stats.projects') },
     { icon: Cpu, value: '2025', label: t('about.stats.graduate') },
     { icon: Zap, value: '10+', label: t('about.stats.technologies') },
-    { icon: Award, value: '4.00', label: t('about.stats.gpa') },
+    { icon: Award, value: '2.71', label: t('about.stats.gpa') },
   ];
 
 
