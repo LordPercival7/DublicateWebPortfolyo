@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
-import { Mail, MapPin, Phone, Send, Github, Linkedin, CheckCircle, AlertCircle } from 'lucide-react';
+import React, { useState, useRef } from 'react';
+import { Mail, MapPin, Phone, Send, Github, Linkedin, CheckCircle, AlertCircle, Shield } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { withRetry, handleAsyncError } from '../utils/errorHandler';
+import ReCAPTCHA from 'react-google-recaptcha'; // <-- ReCAPTCHA import edildi
 
 interface FormData {
   name: string;
@@ -25,6 +26,10 @@ export const Contact: React.FC = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [formStatus, setFormStatus] = useState<FormStatus>({ type: null, message: '' });
+  
+  // ReCAPTCHA için gerekli state ve ref eklendi
+  const [recaptchaToken, setRecaptchaToken] = useState<string | null>(null);
+  const recaptchaRef = useRef<any>(null);
 
   const contactInfo = [
     {
@@ -75,6 +80,11 @@ export const Contact: React.FC = () => {
       [name]: value
     }));
   };
+  
+  // ReCAPTCHA değişimini yakalayan fonksiyon
+  const onRecaptchaChange = (token: string | null) => {
+      setRecaptchaToken(token);
+  };
 
   const validateForm = (): boolean => {
     if (!formData.name.trim()) {
@@ -93,6 +103,11 @@ export const Contact: React.FC = () => {
       setFormStatus({ type: 'error', message: t('contact.messageRequired') });
       return false;
     }
+    // ReCAPTCHA token'ı kontrolü eklendi
+    if (!recaptchaToken) {
+      setFormStatus({ type: 'error', message: 'Lütfen reCAPTCHA doğrulaması yapın.' });
+      return false;
+    }
     return true;
   };
 
@@ -100,21 +115,25 @@ export const Contact: React.FC = () => {
     e.preventDefault();
     setFormStatus({ type: null, message: '' });
 
-    if (!validateForm()) return;
-
+    if (!validateForm()) {
+        setIsSubmitting(false);
+        return;
+    }
+    
     setIsSubmitting(true);
-
+    
     const submitForm = handleAsyncError(async () => {
       return await withRetry(async () => {
-        const response = await fetch("https://formspree.io/f/mgvlzqqb", {
+        // Form verileri ve reCAPTCHA token'ı ile Netlify fonksiyonuna POST isteği
+        const response = await fetch("/.netlify/functions/contact-form", {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
             'Accept': 'application/json'
           },
-          body: JSON.stringify(formData)
+          body: JSON.stringify({ ...formData, recaptchaToken }) // Token da gönderiliyor
         });
-
+        
         if (!response.ok) {
           const data = await response.json();
           throw new Error(data.error || t('contact.generalError'));
@@ -133,6 +152,13 @@ export const Contact: React.FC = () => {
           message: t('contact.success')
         });
         setFormData({ name: '', email: '', subject: '', message: '' });
+        
+        // ReCAPTCHA'yı sıfırla
+        if (recaptchaRef.current) {
+            recaptchaRef.current.reset();
+        }
+        setRecaptchaToken(null);
+
       } else {
         setFormStatus({
           type: 'error',
@@ -143,47 +169,6 @@ export const Contact: React.FC = () => {
       setFormStatus({
         type: 'error',
         message: error instanceof Error ? error.message : t('contact.networkError')
-      });
-    } finally {
-      setIsSubmitting(false);
-    }
-  };
-
-  const handleSubmitLegacy = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setFormStatus({ type: null, message: '' });
-
-    if (!validateForm()) return;
-
-    setIsSubmitting(true);
-
-    try {
-      const response = await fetch("https://formspree.io/f/mgvlzqqb", {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify(formData)
-      });
-
-      if (response.ok) {
-        setFormStatus({
-          type: 'success',
-          message: t('contact.success')
-        });
-        setFormData({ name: '', email: '', subject: '', message: '' });
-      } else {
-        const data = await response.json();
-        setFormStatus({
-          type: 'error',
-          message: data.error || t('contact.generalError')
-        });
-      }
-    } catch (error) {
-      setFormStatus({
-        type: 'error',
-        message: t('contact.networkError')
       });
     } finally {
       setIsSubmitting(false);
@@ -334,15 +319,24 @@ export const Contact: React.FC = () => {
                 <textarea
                   id="message"
                   name="message"
+                  rows={6}
                   value={formData.message}
                   onChange={handleInputChange}
-                  rows={6}
                   className="w-full px-4 py-3 bg-gray-50 dark:bg-gray-600 border border-gray-300 dark:border-gray-500 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent text-gray-900 dark:text-white transition-all duration-200 resize-none"
                   placeholder={t('contact.messagePlaceholder')}
                   required
                 ></textarea>
               </div>
-
+              
+              {/* reCAPTCHA bileşeni buraya gelecek */}
+              <div className="flex justify-center">
+                <ReCAPTCHA
+                  ref={recaptchaRef}
+                  sitekey="YOUR_SITE_KEY" // <<< Kendi Site Anahtarınızla değiştirin
+                  onChange={onRecaptchaChange}
+                />
+              </div>
+              
               <button
                 type="submit"
                 disabled={isSubmitting}
