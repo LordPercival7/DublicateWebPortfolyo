@@ -32,35 +32,34 @@ const translations = {
 
     // Hero Section
     'hero.title': 'Elektronik ve Haberleşme Mühendisi',
-    'hero.specializing': 'Uzmanlık Alanları',
+    'hero.specializing': 'Alanlar',
     'hero.skills': [
       'PCB Tasarımı',
       'Gömülü Sistemler',
       'Anten Tasarımı',
       'Devre Analizi',
       'Mikrodenetleyiciler',
-      'RF Mühendisliği'
-    ],
-    'hero.description': 'Anten sistemleri, RF devreleri, PCB tasarımı ve mikroşerit anten tasarımı konularında deneyimli; STM32 ve MSP430 gibi mikrodenetleyicilerle gömülü sistemler geliştirme alanında uzmanlaşmış bir elektronik mühendisi.',
-    'hero.viewProjects': 'Projelerimi İncele',
+      'RF Mühendisliği'],
+    'hero.description': 'Anten sistemleri, RF devreleri, PCB tasarımı, mikroşerit ve dizi anten tasarımı gibi konularla birlikte, STM32 ve MSP430 gibi mikrodenetleyicilerle gömülü sistemler tasarlama konularına ilgili ve deneyim sahibi',
+    'hero.viewProjects': 'Projelerimi Görüntüle',
     'hero.getInTouch': 'İletişime Geç',
     'hero.downloadCV': 'CV İndir',
 
     // About Section
     'about.title': 'Hakkımda',
-    'about.subtitle': 'Fikirleri yenilikçi elektronik çözümlere dönüştürüyorum',
+    'about.subtitle': 'Fikirleri yenilikçi elektronik çözümlere dönüştürme',
     'about.mainTitle': 'Genel Bakış',
-    'about.description1': "Kocaeli Üniversitesi Elektronik ve Haberleşme Mühendisliği bölümünden mezun oldum. Anten sistemleri, RF devreleri, gömülü sistemler ve PCB tasarımı konularında kapsamlı bilgi ve deneyime sahibim.",
-    'about.description2': 'Eğitimim boyunca CST Studio Suite ile anten simülasyonları üzerinde çalıştım ve STM32, MSP430 gibi mikrodenetleyiciler kullanarak çeşitli gömülü sistem projeleri geliştirdim.',
-    'about.description3': "PCB tasarımı ve üretimi, dijital kontrol sistemleri ve MATLAB ile karmaşık sayı gösterimleri gibi alanlarda pek çok pratik proje tamamladım. DC güç kaynaklarından gelişmiş fazlı dizi anten sistemlerine kadar geniş bir yelpazede çalıştım. Teorik bilgiyi gerçek dünya uygulamalarına dönüştürme tutkusuyla elektronik mühendisliği alanındaki yetkinliklerimi sürekli geliştiriyorum.",
+    'about.description1': "Elektronik ve Haberleşme Mühendisliği alanında aldığım eğitim, beni Kocaeli Üniversitesi'nden donanımlı bir mühendis olarak mezun etti. Anten sistemleri, RF devreleri, gömülü sistemler ve PCB tasarımı konularında kapsamlı bir birikime sahibim.",
+    'about.description2': 'Eğitimim sırasında CST Studio Suite ile anten simülasyonları üzerine çalıştım. STM32 ve MSP430 gibi mikrodenetleyicileri kullanarak gömülü sistem projelerinde yer aldım.',
+    'about.description3': "Bunun yanı sıra, PCB tasarımı ve üretimi, dijital kontrol sistemleri ve MATLAB'i kullanarak karmaşık sayı gösterimlerini kapsayan birçok pratik çalışmada bulundum. DC güç kaynaklarının tasarımından, gelişmiş fazlı dizi antenlerin yönlendirme sistemlerine kadar çeşitli projeler geliştirdim. Teorik bilgiyi gerçek dünya uygulamalarına dönüştürme motivasyonuyla elektronik mühendisliği alanındaki yetkinliklerimi sürekli olarak artırmayı hedefliyorum.",
     'about.stats.projects': 'Tamamlanan Proje',
     'about.stats.graduate': 'Mezuniyet Yılı',
-    'about.stats.technologies': 'Kullanılan Teknoloji',
-    'about.stats.gpa': 'Not Ortalaması',
+    'about.stats.technologies': 'Kullanılan Teknolojiler',
+    'about.stats.gpa': 'GPA',
 
     // Skills Section
     'skills.title': 'Teknik Yetenekler',
-    'skills.subtitle': 'Donanım tasarımı, gömülü sistemler ve RF mühendisliği alanlarında kapsamlı deneyim',
+    'skills.subtitle': 'Donanım tasarımı, gömülü sistemler ve RF mühendisliği üzerine edindiğim deneyimler',
     'skills.hardware': 'Donanım Tasarımı',
     'skills.embedded': 'Gömülü Sistemler',
     'skills.rf': 'RF ve Anten Tasarımı',
@@ -78,14 +77,14 @@ const translations = {
     'projects.antenna': 'Anten Tasarımı',
     'projects.demo': 'Demo',
     'projects.code': 'Kod',
-    'projects.viewDemo': 'Demoyu Görüntüle',
+    'projects.viewDemo': 'Demo Görüntüle',
     'projects.sourceCode': 'Kaynak Kod',
     'projects.keyFeatures': 'Temel Özellikler',
-    'projects.toolsTech': 'Kullanılan Araçlar ve Teknolojiler',
+    'projects.toolsTech': 'Araçlar ve Teknolojiler',
 
     // Project Descriptions
     'projects.dcPowerSupply.title': 'DC Güç Kaynağı',
-    'projects.dcPowerSupply.description': 'LM317 ayarlanabilir regülatör tabanlı düzenlenmiş DC güç kaynağı tasarımı ve uygulaması. Proje; şematik tasarım, devre simülasyonu ve 2 katmanlı PCB üretimini içermektedir. Regülatörün yerleşik koruma özellikleri güvenli çalışmayı sağlarken, harici tasarım verimlilik ve kararlı çıkışa odaklanmıştır.',
+    'projects.dcPowerSupply.description': 'LM317 ayarlanabilir regülatör tabanlı düzenlenmiş DC güç kaynağı tasarımı ve uygulaması. Proje şematik tasarım, devre simülasyonu ve 2 katmanlı PCB üretimini içerdi. Regülatörün yerleşik koruma özellikleri güvenli çalışmayı sağlarken, harici tasarım verimlilik ve kararlı çıkışa odaklandı.',
     'projects.dcPowerSupply.features': [
       'Şematik tasarım ve fonksiyonel simülasyon',
       'Optimize edilmiş 2 katmanlı PCB düzeni',
@@ -94,7 +93,7 @@ const translations = {
       'Fiziksel PCB üretimi ve test'
     ],
     'projects.digitalPotentiometer.title': 'Dijital Potansiyometre',
-    'projects.digitalPotentiometer.description': 'Altium Designer\'da sıfırdan geliştirilen dijital potansiyometre devresinin tam PCB tasarımı ve uygulaması. Modül Pmod DPOT Bassy3 arayüzü ile tam uyumlu olup, gömülü sistemler için hassas, dijital kontrollü direnç ayarı sağlamaktadır.',
+    'projects.digitalPotentiometer.description': 'Altium Designer\'da sıfırdan geliştirilen dijital potansiyometre devresinin tam PCB tasarımı ve uygulaması. Modül Pmod DPOT Bassy3 arayüzü ile tamamen uyumludur ve gömülü sistemler için hassas, dijital kontrollü direnç ayarı sağlar.',
     'projects.digitalPotentiometer.features': [
       'Altium Designer\'da tam şematik tasarım ve PCB düzeni',
       'Pmod DPOT Bassy3 ile uyumluluk',
@@ -103,24 +102,24 @@ const translations = {
       'Başarılı prototipleme ve test'
     ],
     'projects.complexNumberApp.title': 'Karmaşık Sayı Gösterim Uygulaması',
-    'projects.complexNumberApp.description': 'Karmaşık sayıların dikdörtgen ve kutupsal koordinatları arasında gerçek zamanlı dönüşüm yapan bir MATLAB uygulaması. MATLAB App Designer ile tasarlanmış, etkileşimli kaydırıcılar ve karmaşık sayı vektörlerinin anında görselleştirilmesi için dinamik bir çizim alanı içermektedir.',
+    'projects.complexNumberApp.description': 'Bu proje, karmaşık sayıların dikdörtgen ve kutupsal koordinatları arasında gerçek zamanlı dönüşümler gerçekleştiren bir MATLAB Uygulamasıdır. Kullanıcı dostu Matlab App Designer ile tasarlanmış, etkileşimli kaydırıcılar ve karmaşık sayı vektörlerini anında görselleştirmek için dinamik bir çizim alanı içerir.',
     'projects.complexNumberApp.features': [
       'Gerçek zamanlı dikdörtgen-kutupsal dönüşüm',
       'Etkileşimli grafik görselleştirme',
-      'Kullanıcı dostu MATLAB arayüzü',
+      'Kullanıcı dostu MATLAB GUI',
       'Matematiksel hesaplama motoru',
-      'Eğitim odaklı arayüz tasarımı'
+      'Eğitim arayüzü tasarımı'
     ],
     'projects.msp430DiscoLights.title': 'MSP430 Ses Kontrollü Disko Işık Sistemi',
-    'projects.msp430DiscoLights.description': 'Ses yoğunluğuna göre LED\'leri kontrol eden MSP430 mikrodenetleyici tabanlı gömülü sistem. Proje; Altium Designer\'da donanım tasarımı ve C dilinde firmware geliştirmeyi içermektedir. Sistem, gerçek zamanlı ve duyarlı ses-ışık efekti oluşturmak için MSP430\'un ADC\'si aracılığıyla analog ses sinyallerini işlemektedir.',
+    'projects.msp430DiscoLights.description': 'Bu gömülü sistem, ses yoğunluğuna göre LED\'leri kontrol etmek için MSP430 mikrodenetleyici kullanır. Proje Altium Designer\'da donanım tasarımı ve C\'de firmware geliştirmeyi içerir. Sistem, gerçek zamanlı, duyarlı ses-ışık efekti oluşturmak için MSP430\'un ADC\'si aracılığıyla analog ses sinyallerini işler.',
     'projects.msp430DiscoLights.features': [
       'Gerçek zamanlı ses sinyali işleme',
       'Ses seviyesi algılama için ADC',
-      'Özel PCB tasarımı: Kompakt, özel üretilmiş devre kartı',
+      'Özel PCB Tasarımı: Kompakt, özel üretilmiş devre kartı',
       'Gömülü C programlama'
     ],
     'projects.stm32OledCounter.title': 'STM32 OLED Zaman Kontrollü Buton Sayacı',
-    'projects.stm32OledCounter.description': 'OLED ekran kullanan STM32 tabanlı zaman kontrollü buton sayma sistemi; donanım ve yazılım geliştirme özelliklerine sahiptir.',
+    'projects.stm32OledCounter.description': 'OLED ekranlı STM32 tabanlı zaman kontrollü buton sayma sistemi, donanım ve yazılım geliştirme özellikli.',
     'projects.stm32OledCounter.features': [
       'Kesme tabanlı buton işleme',
       'Zamanlayıcı tabanlı sayma sistemi',
@@ -129,15 +128,15 @@ const translations = {
       'Gerçek zamanlı gömülü sistem tasarımı'
     ],
     'projects.voiceControlledMotor.title': 'Ses Kontrollü DC Motor Sistemi',
-    'projects.voiceControlledMotor.description': 'Ses sinyallerine dayalı olarak DC motoru çalıştıran klasik bir kontrol sistemi. İlk olarak Multisim\'de tasarlanıp simüle edilen devre, sesi yakalamak için kondansatör mikrofon kullanmaktadır. Zayıf sinyal daha sonra iki transistör tarafından DC motoru sürmek için yeterli seviyeye yükseltilmektedir.',
+    'projects.voiceControlledMotor.description': 'Bu proje, ses sinyallerine dayalı olarak DC motor çalıştıran klasik bir kontrol sistemidir. İlk olarak Multisim\'de tasarlanan ve simüle edilen devre, sesi yakalamak için kondansatör mikrofon kullanır. Bu zayıf sinyal daha sonra iki transistör tarafından DC motor sürmek için yeterli seviyeye yükseltilir.',
     'projects.voiceControlledMotor.features': [
-      'Ses sinyali yükseltme',
-      'Analog-mekanik dönüşüm: Ses sinyalini motor hareketine dönüştürme',
+      'Ses Sinyali Yükseltme',
+      'Analog-Mekanik Dönüşüm: Ses sinyalini motor hareketine dönüştürür',
       'Özel PCB tasarımı ve üretimi',
-      'Entegre tasarım süreci: Simülasyondan fiziksel ürüne tam iş akışı'
+      'Entegre Tasarım Süreci: Simülasyondan fiziksel ürüne tam iş akışı'
     ],
     'projects.microstripAntenna.title': '2.4 GHz Geniş Bant Mikroşerit Anten',
-    'projects.microstripAntenna.description': 'CST Studio Suite kullanılarak 2.4 GHz geniş bant mikroşerit anten tasarımı, simülasyonu ve fiziksel üretimi gerçekleştirilmiştir.',
+    'projects.microstripAntenna.description': 'CST Studio Suite kullanarak 2.4 GHz geniş bant mikroşerit anten tasarımı, simülasyon ve fiziksel üretim.',
     'projects.microstripAntenna.features': [
       'CST Studio Suite simülasyonu',
       'S-parametre optimizasyonu',
@@ -146,7 +145,7 @@ const translations = {
       'Fiziksel anten üretimi'
     ],
     'projects.phasedArrayAntenna.title': 'Fazlı Dizi Mikroşerit Antenlerde Işın Yönlendirme (Tez)',
-    'projects.phasedArrayAntenna.description': 'Lisans tezi olarak tamamlanan bu proje, ışın yönlendirme uygulamaları için fazlı dizi mikroşerit antenlerin tasarımı ve analizine odaklanmaktadır. CST Studio Suite kullanılarak, fazlı dizilerin teorik ilkeleri ve simülasyon ortamında pratik uygulamaları araştırılmıştır.',
+    'projects.phasedArrayAntenna.description': 'Lisans tezi olarak tamamlanan bu proje, ışın yönlendirme uygulamaları için fazlı dizi mikroşerit antenlerin tasarımı ve analizine odaklanır. CST Studio Suite kullanarak, proje fazlı dizilerin teorik ilkelerini ve simülasyon ortamında pratik uygulamalarını araştırır.',
     'projects.phasedArrayAntenna.features': [
       'Fazlı dizi anten tasarımı',
       'Işın yönlendirme algoritması geliştirme',
@@ -154,92 +153,104 @@ const translations = {
       'Dizi faktörü analizi',
       'Tez araştırması ve dokümantasyonu'
     ],
-    'projects.lpHpFilter.title': 'Alçak Geçiren ve Yüksek Geçiren Filtre',
-    'projects.lpHpFilter.description': 'Altium Designer kullanılarak tasarlanmış alçak geçiren ve yüksek geçiren filtre devreleri. Her iki filtre de PCB düzeni ve üretimiyle tamamlanmıştır.',
-    'projects.lpHpFilter.features': [
-      'Alçak geçiren filtre tasarımı ve PCB',
-      'Yüksek geçiren filtre tasarımı ve PCB',
-      'Altium Designer ile şematik çizim',
-      'İki katmanlı PCB düzeni'
-    ],
-    'projects.buckBoost.title': 'Buck ve Boost Konvertör',
-    'projects.buckBoost.description': 'DC-DC güç dönüştürme için Buck ve Boost konvertör devreleri tasarlanmıştır. Her iki konvertör de Altium Designer\'da tasarlanıp simüle edilmiştir.',
-    'projects.buckBoost.features': [
-      'Buck konvertör tasarımı (voltaj düşürme)',
-      'Boost konvertör tasarımı (voltaj yükseltme)',
-      'Güç elektroniği devre tasarımı',
-      'Simülasyon ve PCB uygulaması'
-    ],
-    'projects.acDcAdaptor.title': 'AC-DC Adaptör',
-    'projects.acDcAdaptor.description': 'Flyback topolojisi kullanan bir AC-DC adaptör tasarımı. SMPS (Anahtarlamalı Mod Güç Kaynağı) prensipleriyle çalışan, kompakt ve verimli bir güç çözümüdür.',
-    'projects.acDcAdaptor.features': [
-      'Flyback topolojisi tasarımı',
-      'SMPS devre tasarımı',
-      'Altium Designer ile şematik ve PCB',
-      'Yüksek verimli güç dönüşümü'
-    ],
-    'projects.stmRelay.title': 'STM32 Röle Kontrol Sistemi',
-    'projects.stmRelay.description': 'STM32 mikrodenetleyici kullanılarak kablosuz iletişim ve röle kontrolü sağlayan bir sistem. Altium Designer\'da PCB tasarımı yapılmış ve gömülü yazılım geliştirilmiştir.',
-    'projects.stmRelay.features': [
-      'STM32 tabanlı kontrol',
-      'Röle sürücü devresi',
-      'Kablosuz iletişim entegrasyonu',
-      'PCB tasarımı ve üretimi',
-      'Altium Designer kullanımı'
-    ],
 
     // Experience Section
     'experience.title': 'Deneyim',
-    'experience.subtitle': 'Her projede öğrenmeyi ve üretmeyi ön planda tutuyorum',
-    'experience.achievements': 'Önemli Başarılar',
+    'experience.subtitle': 'Her projede öğrenmeyi ve üretmeyi ön planda tutuyorum.',
+    'experience.achievements': 'Önemli Deneyimler',
+    'experience.dmy.company': 'DMY Elektrik Otomasyon Aydınlatma',
+    'experience.dmy.position': 'Elektronik Mühendisliği Stajeri',
+    'experience.dmy.period': 'Tem 2025 - Agu 2025',
+    'experience.dmy.location': 'İstanbul, Türkiye',
+    'experience.dmy.description': 'ARM tabanlı sensör devresinin PCB tasarım, gömülü yazılım geliştirme ve saha test süreçlerinde görev aldım. Donanım-yazılım entegrasyonunu test ederek hata ayıklama çalışmalarına katkı sağladım.',
+    'experience.dmy.achievements': [
+      'ARM tabanlı sensör devresinin PCB tasarım sürecinde Altium Designer kullanarak şematik çizim ve yerleşim aşamalarına aktif katkı sağladım.',
+      'Gömülü C diliyle donanım-yazılım entegrasyonunu test ederek sistemin doğru çalışmasını garanti altına aldım.',
+      'Sensör devresinin saha testlerinde veri toplama ve hata ayıklama süreçlerinde görev alarak ürünün doğrulama aşamasına katkıda bulundum.'
+    ],
+    'experience.medel.company': 'Medel Elektronik ve Mühendislik',
+    'experience.medel.position': 'Elektronik Mühendisliği Stajeri',
+    'experience.medel.period': 'Tem 2023 - Eyl 2023',
+    'experience.medel.location': 'İstanbul, Türkiye',
+    'experience.medel.description': 'Yüksek Voltaj Konvertörü (YVK) projesinde teknik dokümantasyon analizi, gömülü yazılım inceleme ve hata takibi süreçlerinde çalıştım. Ürün testlerinde mühendis ekibe destek verdim',
+    'experience.medel.achievements': [
+      'Yüksek Voltaj Konvertörü (YVK) projesine ait teknik dokümantasyonları inceleyerek proje gereksinimlerinin uygunluk analizini gerçekleştirdim.',
+      'C diliyle yazılmış gömülü yazılım yapısını analiz ederek hata takibi ve sistem optimizasyonu çalışmalarına destek verdim.',
+      'Elektronik üretim ve ürün test süreçlerinde mühendis ekiple birlikte çalışarak kalite kontrol ve fonksiyonel doğrulama adımlarına katkıda bulundum.'
+    ],
 
     // Education Section
     'education.title': 'Eğitim',
-    'education.subtitle': 'Elektronik ve haberleşme mühendisliğinde güçlü akademik altyapı',
+    'education.subtitle': 'Elektronik ve haberleşme mühendisliği ve ileri teknolojilerde güçlü akademik altyapı',
+    'education.degree.electronics': 'Elektronik ve Haberleşme Mühendisliği',
+    'education.degree.highschool': 'Lise Mezuniyeti',
+    'education.university.kocaeli': 'Kocaeli Üniversitesi',
+    'education.university.habire': 'Habire Yahşi Anadolu Lisesi',
+    'education.thesis.title': 'Faz Dizinli Mikroşerit Antenlerde Hüzme Tarama',
     'education.coursework.title': 'İlgili Dersler',
     'education.academicProjects.title': 'Akademik Projeler',
-    'education.thesis.title': 'Bitirme Tezi',
+    'education.projects.msp430Audio.title': 'MSP430 Ses Kontrollü Disko Işık Sistemi',
+    'education.projects.msp430Audio.description': 'Bir mikrodenetleyici kullanarak sesin seviyesini algılayan ve buna göre LED\'leri kontrol eden bir gömülü sistem projesi.',
+    'education.projects.stm32Oled.title': 'STM32 OLED Zaman Kontrollü Buton Sayacı',
+    'education.projects.stm32Oled.description': 'STM32 tabanlı, bir OLED ekran üzerinde zaman ve buton sayımı yapan bir gömülü sistem yazılımı',
+    'education.projects.phasedArray.title': 'Fazlı Dizi Mikroşerit Antenlerde Işın Yönlendirme',
+    'education.projects.phasedArray.description': 'Birden fazla anten elemanının faz farklarını kullanarak elektromanyetik ışını belirli bir yöne yönlendirme üzerine bir tez çalışması.',
+    'education.projects.dcPowerSupply.title': 'DC Güç Kaynağı',
+    'education.projects.dcPowerSupply.description': 'Ayarlanabilir bir DC güç kaynağı devresi tasarlayarak şematik ve PCB çizimi yapılması.',
+    'education.projects.voiceMotor.title': 'Ses Kontrollü DC Motor Sistemi',
+    'education.projects.voiceMotor.description': 'Ses sinyallerine göre bir DC motorun dönüş hızını ve yönünü kontrol eden klasik bir kontrol sistemi',
 
     // Certificates Section
     'certificates.title': 'Sertifikalar',
-    'certificates.subtitle': 'Sürekli öğrenme ve ileri teknolojilerde mesleki gelişim',
+    'certificates.subtitle': 'Sürekli öğrenim ve ileri teknolojilerde mesleki gelişim',
     'certificates.viewDetails': 'Detayları Görüntüle',
     'certificates.verify': 'Doğrula',
-    'certificates.download': 'İndir',
+    'certificates.download': 'Dosyayı İndir',
     'certificates.issued': 'Verilme Tarihi',
     'certificates.credentialId': 'Kimlik Numarası',
+    'certificates.underwater.title': 'Su Altı Sistemleri Tasarım Eğitimi',
+    'certificates.underwater.issuer': 'Uzmanlık Eğitimi',
+    'certificates.underwater.description': 'Su altı araçlarının tasarımı ve mühendisliğine odaklanan kapsamlı bir eğitim. Bu eğitimde, tasarım kriterleri, sistem bileşenleri, çevresel faktörler ve operasyonel gereksinimler gibi konulara dikkat edilerek su altı sistemlerinin nasıl geliştirileceği üzerine bilgi edindim.',
+    'certificates.career.title': 'Kariyer ve Yetkinlik Buluşmaları',
+    'certificates.career.issuer': 'Savunma Sanayi Akademi',
+    'certificates.career.description': 'Savunma Sanayi Başkanlığı\'nın düzenlediği \'Milli Yetkinlik Hamlesi\' kapsamında gerçekleştirilen \'Kariyer ve Yetkinlik Buluşmaları-2\' etkinliğine katılım.',
+    'certificates.thesis.title': 'Bitirme Tezi',
+    'certificates.thesis.issuer': 'Kocaeli Üniversitesi',
+    'certificates.thesis.description': 'Faz dizinli mikroşerit antenlerde hüzme yönlendirme üzerine yapılan ve ileri simülasyon araçlarının kullanıldığı lisans tez projemin tamamlanması',
 
     // Contact Section
     'contact.title': 'İletişime Geçin',
-    'contact.subtitle': 'Yenilikçi elektronik projelerde işbirliği yapmaya hazır mısınız? Bir sonraki büyük fikrinizi tartışalım',
+    'contact.subtitle': 'Yenilikçi elektronik projelerde işbirliği yapmaya hazır mısınız? Bir sonraki büyük fikrinizi tartışalım.',
     'contact.info': 'İletişim Bilgileri',
-    'contact.connect': 'Sosyal Medya',
+    'contact.connect': 'Benimle Bağlantı Kurun',
     'contact.collaborate': 'İşbirliği Yapalım',
-    'contact.collaborateText': 'Elektronik ve gömülü sistemler alanındaki bilgi ve deneyimlerimi yeni projelerde paylaşmaya ve geliştirmeye her zaman açığım. PCB tasarımı, gömülü yazılım ve RF mühendisliği konularında fikir alışverişi yapmaktan ve birlikte yenilikçi çözümler üretmekten memnuniyet duyarım.',
-    'contact.sendMessage': 'Mesaj Gönderin',
+    'contact.collaborateText': 'Elektronik ve gömülü sistemler alanındaki bilgi ve deneyimlerimi yeni projelerde paylaşmaya ve geliştirmeye her zaman açığım. PCB tasarımı, gömülü yazılım ve RF mühendisliği konularında fikir alışverişi yapmaktan ve birlikte yenilikçi çözümler üretmekten memnuniyet duyarım. Eğer projenizi hayata geçirmek için iş birliği arıyorsanız, katkı sunmaya hazırım.',
+    'contact.sendMessage': 'Bana Mesaj Gönderin',
     'contact.fullName': 'Ad Soyad',
     'contact.email': 'E-posta Adresi',
     'contact.subject': 'Konu',
-    'contact.message': 'Mesajınız',
-    'contact.messagePlaceholder': 'Proje gereksinimleriniz, zaman çizelgeniz ve karşılaştığınız teknik zorluklar hakkında bilgi verin...',
-    'contact.send': 'Gönder',
+    'contact.message': 'Mesaj',
+    'contact.messagePlaceholder': 'Proje gereksinimleriniz, zaman çizelgeniz ve karşılaştığınız belirli teknik zorluklar hakkında bana bilgi verin...',
+    'contact.send': 'Mesaj Gönder',
     'contact.submitting': 'Gönderiliyor...',
     'contact.success': 'Mesajınız başarıyla gönderildi!',
-    'contact.nameRequired': 'Lütfen adınızı girin',
-    'contact.emailInvalid': 'Lütfen geçerli bir e-posta adresi girin',
-    'contact.subjectRequired': 'Lütfen bir konu girin',
-    'contact.messageRequired': 'Lütfen mesajınızı girin',
-    'contact.recaptchaRequired': 'Lütfen robot olmadığınızı doğrulayın',
-    'contact.networkError': 'Ağ hatası oluştu. Lütfen bağlantınızı kontrol edip tekrar deneyin',
-    'contact.generalError': 'Bir hata oluştu. Lütfen daha sonra tekrar deneyin',
-    'contact.securityVerification': 'Güvenlik Doğrulaması',
-    'contact.securityPrivacy': 'Güvenlik ve Gizlilik',
-    'contact.privacyText': 'Bilgileriniz güvenli bir şekilde saklanır ve asla üçüncü taraflarla paylaşılmaz.',
+    'contact.nameRequired': 'Lütfen adınızı girin.',
+    'contact.emailInvalid': 'Lütfen geçerli bir e-posta adresi girin.',
+    'contact.subjectRequired': 'Lütfen bir konu girin.',
+    'contact.messageRequired': 'Lütfen mesajınızı girin.',
+    'contact.networkError': 'Bir ağ hatası oluştu. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.',
+    'contact.generalError': 'Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin.',
+
+    // Footer
+    'footer.madeWith': 've son teknoloji ile yapıldı.',
+    'footer.quickLinks': 'Hızlı Bağlantılar',
+    'footer.specializations': 'Uzmanlık Alanları',
+    'footer.scrollToTop': 'Yukarı çık',
 
     // Common
     'common.phone': 'Telefon',
     'common.location': 'Konum',
-    'common.current': 'Güncel',
+    'common.current': 'Mevcut',
     'common.all': 'Tümü'
   },
   en: {
@@ -264,26 +275,26 @@ const translations = {
       'Microcontrollers',
       'RF Engineering'
     ],
-    'hero.description': 'Experienced electronics engineer specializing in antenna systems, RF circuits, PCB design, and microstrip antenna design, with expertise in developing embedded systems using STM32 and MSP430 microcontrollers.',
-    'hero.viewProjects': 'View Projects',
+    'hero.description': 'Experienced in antenna systems, RF circuits, PCB design, microstrip and phased array antenna design, and embedded systems development with microcontrollers like STM32 and MSP430.',
+    'hero.viewProjects': 'View My Projects',
     'hero.getInTouch': 'Get in Touch',
     'hero.downloadCV': 'Download CV',
 
     // About Section
     'about.title': 'About Me',
-    'about.subtitle': 'Transforming ideas into innovative electronic solutions',
+    'about.subtitle': 'Turning ideas into innovative electronic solutions',
     'about.mainTitle': 'Overview',
-    'about.description1': "I graduated from Kocaeli University with a degree in Electronics and Communication Engineering. I have comprehensive knowledge and experience in antenna systems, RF circuits, embedded systems, and PCB design.",
-    'about.description2': 'Throughout my education, I worked on antenna simulations using CST Studio Suite and developed various embedded system projects using microcontrollers such as STM32 and MSP430.',
-    'about.description3': "I have completed numerous practical projects in areas such as PCB design and fabrication, digital control systems, and complex number representation using MATLAB. I have worked across a wide spectrum, from DC power supplies to advanced phased array antenna systems. I am passionate about transforming theoretical knowledge into real-world applications and continuously developing my expertise in electronic engineering.",
-    'about.stats.projects': 'Completed Projects',
-    'about.stats.graduate': 'Graduation Year',
+    'about.description1': "My education in Electronics and Communications Engineering provided me with a strong foundation, graduating as a well-equipped engineer from Kocaeli University. I have comprehensive knowledge in antenna systems, RF circuits, embedded systems, and PCB design.",
+    'about.description2': 'During my studies, I worked on antenna simulations using CST Studio Suite and participated in embedded systems projects with microcontrollers such as STM32 and MSP430.',
+    'about.description3': "Additionally, I completed numerous practical projects covering PCB design and fabrication, digital control systems, and complex number representation applications using MATLAB. My projects range from DC power supply design to advanced phased array antenna steering systems. I am passionate about turning theoretical knowledge into practical applications and continuously enhancing my skills in the field of electronics engineering.",
+    'about.stats.projects': 'Projects Completed',
+    'about.stats.graduate': 'Graduate Year',
     'about.stats.technologies': 'Technologies Used',
     'about.stats.gpa': 'GPA',
 
     // Skills Section
     'skills.title': 'Technical Skills',
-    'skills.subtitle': 'Comprehensive expertise in hardware design, embedded systems, and RF engineering',
+    'skills.subtitle': 'Comprehensive expertise across hardware design, embedded systems, and RF engineering',
     'skills.hardware': 'Hardware Design',
     'skills.embedded': 'Embedded Systems',
     'skills.rf': 'RF & Antenna Design',
@@ -308,7 +319,7 @@ const translations = {
 
     // Project Descriptions
     'projects.dcPowerSupply.title': 'DC Power Supply',
-    'projects.dcPowerSupply.description': 'Design and implementation of a regulated DC power supply based on the LM317 adjustable regulator. The project included schematic design, circuit simulation, and 2-layer PCB fabrication. While the regulator\'s built-in protection features ensure safe operation, the external design focuses on efficiency and stable output.',
+    'projects.dcPowerSupply.description': 'Design and implementation of a regulated DC power supply based on the LM317 adjustable regulator. The project included schematic design, circuit simulation, and 2-layer PCB fabrication. While the regulator\'s built-in protection features ensured safe operation, the external design focused on efficiency and stable output.',
     'projects.dcPowerSupply.features': [
       'Schematic design and functional simulation',
       'Optimized 2-layer PCB layout',
@@ -326,24 +337,24 @@ const translations = {
       'Successful prototyping and testing'
     ],
     'projects.complexNumberApp.title': 'Complex Number Representation App',
-    'projects.complexNumberApp.description': 'A MATLAB application that performs real-time conversions between rectangular and polar coordinates of complex numbers. Designed using MATLAB App Designer, it features interactive sliders and a dynamic plotting area for instant visualization of complex number vectors.',
+    'projects.complexNumberApp.description': 'This project is a MATLAB Application that performs real-time conversions between rectangular and polar coordinates of complex numbers. Designed with user-friendly Matlab App Designer, it features interactive sliders and a dynamic plotting area for instant visualization of complex number vectors.',
     'projects.complexNumberApp.features': [
       'Real-time rectangular-polar conversion',
       'Interactive graphical visualization',
-      'User-friendly MATLAB interface',
+      'User-friendly MATLAB GUI',
       'Mathematical computation engine',
       'Educational interface design'
     ],
     'projects.msp430DiscoLights.title': 'MSP430 Voice-Controlled Disco Light System',
-    'projects.msp430DiscoLights.description': 'An embedded system using an MSP430 microcontroller to control LEDs based on sound intensity. The project includes hardware design in Altium Designer and firmware development in C. The system processes analog audio signals through the MSP430\'s ADC to create real-time, responsive sound-to-light effects.',
+    'projects.msp430DiscoLights.description': 'This embedded system uses an MSP430 microcontroller to control LEDs based on sound intensity. The project includes hardware design in Altium Designer and firmware development in C. The system processes analog audio signals through the MSP430\'s ADC to create real-time, responsive sound-to-light effects.',
     'projects.msp430DiscoLights.features': [
       'Real-time audio signal processing',
       'ADC for sound level detection',
-      'Custom PCB design: Compact, custom-fabricated circuit board',
+      'Custom PCB Design: Compact, custom-fabricated circuit board',
       'Embedded C programming'
     ],
     'projects.stm32OledCounter.title': 'STM32 OLED Time-Controlled Button Counter',
-    'projects.stm32OledCounter.description': 'An STM32-based time-controlled button counting system with OLED display, featuring comprehensive hardware and software development.',
+    'projects.stm32OledCounter.description': 'STM32-based time-controlled button counting system with OLED display, featuring hardware and software development.',
     'projects.stm32OledCounter.features': [
       'Interrupt-based button handling',
       'Timer-based counting system',
@@ -352,12 +363,12 @@ const translations = {
       'Real-time embedded system design'
     ],
     'projects.voiceControlledMotor.title': 'Voice-Controlled DC Motor System',
-    'projects.voiceControlledMotor.description': 'A classic control system that operates a DC motor based on voice signals. Initially designed and simulated in Multisim, the circuit uses a condenser microphone to capture sound. This weak signal is then amplified by two transistors to sufficient levels to drive the DC motor.',
+    'projects.voiceControlledMotor.description': 'This project is a classic control system that operates a DC motor based on voice signals. Initially designed and simulated in Multisim, the circuit uses a condenser microphone to capture sound. This weak signal is then amplified by two transistors to sufficient levels to drive the DC motor.',
     'projects.voiceControlledMotor.features': [
-      'Audio signal amplification',
-      'Analog-to-mechanical conversion: Converts audio signals to motor movement',
+      'Audio Signal Amplification',
+      'Analog-to-Mechanical Conversion: Converts audio signals to motor movement',
       'Custom PCB design and fabrication',
-      'Integrated design process: Complete workflow from simulation to physical product'
+      'Integrated Design Process: Complete workflow from simulation to physical product'
     ],
     'projects.microstripAntenna.title': '2.4 GHz Wideband Microstrip Antenna',
     'projects.microstripAntenna.description': '2.4 GHz wideband microstrip antenna design, simulation, and physical fabrication using CST Studio Suite.',
@@ -369,7 +380,7 @@ const translations = {
       'Physical antenna fabrication'
     ],
     'projects.phasedArrayAntenna.title': 'Beam Steering in Phased Array Microstrip Antennas (Thesis)',
-    'projects.phasedArrayAntenna.description': 'Completed as an undergraduate thesis, this project focuses on the design and analysis of phased array microstrip antennas for beam steering applications. Using CST Studio Suite, the theoretical principles of phased arrays and their practical implementation in simulation environments were explored.',
+    'projects.phasedArrayAntenna.description': 'Completed as an undergraduate thesis, this project focuses on the design and analysis of phased array microstrip antennas for beam steering applications. Using CST Studio Suite, the project explores the theoretical principles of phased arrays and their practical implementation in simulation environments.',
     'projects.phasedArrayAntenna.features': [
       'Phased array antenna design',
       'Beam steering algorithm development',
@@ -377,87 +388,99 @@ const translations = {
       'Array factor analysis',
       'Thesis research and documentation'
     ],
-    'projects.lpHpFilter.title': 'Low-Pass and High-Pass Filter',
-    'projects.lpHpFilter.description': 'Low-pass and high-pass filter circuits designed using Altium Designer. Both filters were completed with PCB layout and fabrication.',
-    'projects.lpHpFilter.features': [
-      'Low-pass filter design and PCB',
-      'High-pass filter design and PCB',
-      'Schematic design in Altium Designer',
-      'Two-layer PCB layout'
-    ],
-    'projects.buckBoost.title': 'Buck and Boost Converter',
-    'projects.buckBoost.description': 'Buck and Boost converter circuits designed for DC-DC power conversion. Both converters were designed and simulated in Altium Designer.',
-    'projects.buckBoost.features': [
-      'Buck converter design (voltage step-down)',
-      'Boost converter design (voltage step-up)',
-      'Power electronics circuit design',
-      'Simulation and PCB implementation'
-    ],
-    'projects.acDcAdaptor.title': 'AC-DC Adaptor',
-    'projects.acDcAdaptor.description': 'An AC-DC adaptor design using flyback topology. A compact and efficient power solution working with SMPS (Switched-Mode Power Supply) principles.',
-    'projects.acDcAdaptor.features': [
-      'Flyback topology design',
-      'SMPS circuit design',
-      'Schematic and PCB in Altium Designer',
-      'High-efficiency power conversion'
-    ],
-    'projects.stmRelay.title': 'STM32 Relay Control System',
-    'projects.stmRelay.description': 'A system providing wireless communication and relay control using an STM32 microcontroller. PCB design was completed in Altium Designer and embedded software was developed.',
-    'projects.stmRelay.features': [
-      'STM32-based control',
-      'Relay driver circuit',
-      'Wireless communication integration',
-      'PCB design and fabrication',
-      'Altium Designer implementation'
-    ],
 
     // Experience Section
     'experience.title': 'Experience',
-    'experience.subtitle': 'Prioritizing learning and innovation in every project',
-    'experience.achievements': 'Key Achievements',
+    'experience.subtitle': 'Prioritizing learning and production in every project.',
+    'experience.achievements': 'Key Experiences',
+    'experience.dmy.company': 'DMY Electric Automation Lighting',
+    'experience.dmy.position': 'Electronics Engineering Intern',
+    'experience.dmy.period': 'Jul 2025 - Aug 2025',
+    'experience.dmy.location': 'Istanbul, Turkey',
+    'experience.dmy.description': 'I worked on PCB design, embedded software development, and field testing processes for ARM-based sensor circuits. I contributed to debugging efforts by testing hardware-software integration.',
+    'experience.dmy.achievements': [
+      'Actively contributed to the schematic drawing and layout phases of ARM-based sensor circuit PCB design process using Altium Designer.',
+      'Tested hardware-software integration with embedded C language to ensure proper system operation.',
+      'Participated in data collection and debugging processes during field testing of sensor circuits, contributing to the product validation phase.'
+    ],
+    'experience.medel.company': 'Medel Electronics and Engineering',
+    'experience.medel.position': 'Electronics Engineering Intern',
+    'experience.medel.period': 'Jul 2023 - Sep 2023',
+    'experience.medel.location': 'Istanbul, Turkey',
+    'experience.medel.description': 'I worked on technical documentation analysis, embedded software review, and error tracking processes in the High Voltage Converter (HVC) project. I supported the engineering team in product testing.',
+    'experience.medel.achievements': [
+      'Performed compliance analysis of project requirements by examining technical documentation related to the High Voltage Converter (HVC) project.',
+      'Supported error tracking and system optimization efforts by analyzing embedded software structure written in C language.',
+      'Contributed to quality control and functional verification steps by working with the engineering team in electronic production and product testing processes.'
+    ],
 
     // Education Section
     'education.title': 'Education',
-    'education.subtitle': 'Strong academic foundation in electronics and communication engineering',
+    'education.subtitle': 'Strong academic foundation in electronics and communications engineering and advanced technologies',
+    'education.degree.electronics': 'Electronics and Communications Engineering',
+    'education.degree.highschool': 'High School Graduation',
+    'education.university.kocaeli': 'Kocaeli University',
+    'education.university.habire': 'Habire Yahşi Anatolian High School',
+    'education.thesis.title': 'Beam Scanning in Phased Array Microstrip Antennas',
     'education.coursework.title': 'Relevant Coursework',
     'education.academicProjects.title': 'Academic Projects',
-    'education.thesis.title': 'Graduation Thesis',
+    'education.projects.msp430Audio.title': 'MSP430 Voice-Controlled Disco Light System',
+    'education.projects.msp430Audio.description': 'An embedded system project that detects sound levels using a microcontroller and controls LEDs accordingly.',
+    'education.projects.stm32Oled.title': 'STM32 OLED Time-Controlled Button Counter',
+    'education.projects.stm32Oled.description': 'An embedded system software based on STM32 that performs time and button counting on an OLED display',
+    'education.projects.phasedArray.title': 'Beam Steering in Phased Array Microstrip Antennas',
+    'education.projects.phasedArray.description': 'A thesis study on directing electromagnetic beams in a specific direction using phase differences of multiple antenna elements.',
+    'education.projects.dcPowerSupply.title': 'DC Power Supply',
+    'education.projects.dcPowerSupply.description': 'Designing an adjustable DC power supply circuit and creating schematic and PCB drawings.',
+    'education.projects.voiceMotor.title': 'Voice-Controlled DC Motor System',
+    'education.projects.voiceMotor.description': 'A classic control system that controls the rotation speed and direction of a DC motor according to voice signals',
 
     // Certificates Section
     'certificates.title': 'Certificates',
     'certificates.subtitle': 'Continuous learning and professional development in advanced technologies',
     'certificates.viewDetails': 'View Details',
     'certificates.verify': 'Verify',
-    'certificates.download': 'Download',
+    'certificates.download': 'Download Certificate',
     'certificates.issued': 'Issued',
     'certificates.credentialId': 'Credential ID',
+    'certificates.underwater.title': 'Underwater Systems Design Training',
+    'certificates.underwater.issuer': 'Specialized Training',
+    'certificates.underwater.description': 'A comprehensive training focused on the design and engineering of underwater vehicles. In this training, I gained knowledge on how to develop underwater systems by paying attention to topics such as design criteria, system components, environmental factors, and operational requirements.',
+    'certificates.career.title': 'Career and Competency Meetings',
+    'certificates.career.issuer': 'Defense Industry Academy',
+    'certificates.career.description': 'Participation in the \'Career and Competency Meetings-2\' event held within the scope of the \'National Competency Initiative\' organized by the Presidency of Defense Industries.',
+    'certificates.thesis.title': 'Graduation Thesis',
+    'certificates.thesis.issuer': 'Kocaeli University',
+    'certificates.thesis.description': 'Completion of my undergraduate thesis project on beam steering in phased array microstrip antennas using advanced simulation tools',
 
     // Contact Section
     'contact.title': 'Get In Touch',
-    'contact.subtitle': 'Ready to collaborate on innovative electronics projects? Let\'s discuss your next big idea',
+    'contact.subtitle': 'Ready to collaborate on innovative electronics projects? Let\'s discuss your next big idea.',
     'contact.info': 'Contact Information',
-    'contact.connect': 'Social Media',
+    'contact.connect': 'Connect With Me',
     'contact.collaborate': 'Let\'s Collaborate',
-    'contact.collaborateText': 'I\'m always open to sharing my knowledge and experience in electronics and embedded systems through new projects. I enjoy exchanging ideas and creating innovative solutions in PCB design, embedded software, and RF engineering.',
-    'contact.sendMessage': 'Send Message',
+    'contact.collaborateText': 'I’m always open to sharing my knowledge and experience in electronics and embedded systems through new projects. I’d be glad to exchange ideas and create innovative solutions together in areas such as PCB design, embedded software, and RF engineering. If you’re looking for collaboration to bring your project to life, I’m ready to contribute.',
+    'contact.sendMessage': 'Send Me a Message',
     'contact.fullName': 'Full Name',
     'contact.email': 'Email Address',
     'contact.subject': 'Subject',
-    'contact.message': 'Your Message',
-    'contact.messagePlaceholder': 'Tell me about your project requirements, timeline, and any technical challenges you\'re facing...',
-    'contact.send': 'Send',
-    'contact.submitting': 'Sending...',
+    'contact.message': 'Message',
+    'contact.messagePlaceholder': 'Tell me about your project requirements, timeline, and any specific technical challenges you\'re facing...',
+    'contact.send': 'Send Message',
+    'contact.submitting': 'Submitting...',
     'contact.success': 'Your message has been sent successfully!',
-    'contact.nameRequired': 'Please enter your name',
-    'contact.emailInvalid': 'Please enter a valid email address',
-    'contact.subjectRequired': 'Please enter a subject',
-    'contact.messageRequired': 'Please enter your message',
-    'contact.recaptchaRequired': 'Please verify that you are not a robot',
-    'contact.networkError': 'A network error occurred. Please check your connection and try again',
-    'contact.generalError': 'An error occurred. Please try again later',
-    'contact.securityVerification': 'Security Verification',
-    'contact.securityPrivacy': 'Security & Privacy',
-    'contact.privacyText': 'Your information is stored securely and never shared with third parties.',
+    'contact.nameRequired': 'Please enter your name.',
+    'contact.emailInvalid': 'Please enter a valid email address.',
+    'contact.subjectRequired': 'Please enter a subject.',
+    'contact.messageRequired': 'Please enter your message.',
+    'contact.networkError': 'A network error occurred. Please check your connection and try again.',
+    'contact.generalError': 'Something went wrong. Please try again later.',
+
+    // Footer
+    'footer.madeWith': 'and cutting-edge technology.',
+    'footer.quickLinks': 'Quick Links',
+    'footer.specializations': 'Specializations',
+    'footer.scrollToTop': 'Scroll to top',
 
     // Common
     'common.phone': 'Phone',
