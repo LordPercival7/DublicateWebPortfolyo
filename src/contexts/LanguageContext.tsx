@@ -238,6 +238,7 @@ const translations = {
     'contact.emailInvalid': 'Lütfen geçerli bir e-posta adresi girin.',
     'contact.subjectRequired': 'Lütfen bir konu girin.',
     'contact.messageRequired': 'Lütfen mesajınızı girin.',
+    'contact.recaptchaRequired': 'reCAPTCHA doğrulaması gerekli.',
     'contact.networkError': 'Bir ağ hatası oluştu. Lütfen bağlantınızı kontrol edin ve tekrar deneyin.',
     'contact.generalError': 'Bir şeyler ters gitti. Lütfen daha sonra tekrar deneyin.',
 
@@ -473,6 +474,7 @@ const translations = {
     'contact.emailInvalid': 'Please enter a valid email address.',
     'contact.subjectRequired': 'Please enter a subject.',
     'contact.messageRequired': 'Please enter your message.',
+    'contact.recaptchaRequired': 'reCAPTCHA verification is required.',
     'contact.networkError': 'A network error occurred. Please check your connection and try again.',
     'contact.generalError': 'Something went wrong. Please try again later.',
 

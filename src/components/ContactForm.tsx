@@ -86,7 +86,7 @@ export const ContactForm: React.FC = () => {
     }
     
     if (!recaptchaToken) {
-      newErrors.recaptcha = 'reCAPTCHA doğrulaması gerekli.';
+      newErrors.recaptcha = t('contact.recaptchaRequired');
     }
 
     setErrors(newErrors);
@@ -107,13 +107,13 @@ export const ContactForm: React.FC = () => {
     setIsSubmitting(true);
 
     if (!validateForm()) {
-      addNotification('error', t('contact.generalError')); // Düzeltme yapıldı: Hata mesajı çevirisi eklendi
+      addNotification('error', t('contact.generalError'));
       setIsSubmitting(false);
       return;
     }
 
     if (!recaptchaToken) {
-      addNotification('error', 'reCAPTCHA doğrulaması gerekli.');
+      addNotification('error', t('contact.recaptchaRequired'));
       setIsSubmitting(false);
       return;
     }
@@ -277,7 +277,7 @@ export const ContactForm: React.FC = () => {
             
             <ReCAPTCHA
               ref={recaptchaRef}
-              sitekey="6LfFwr8rAAAAAA-A5O_qOw7nTtkCbVIrfMXYxOCJ" // <<< BURAYI KENDİ SİTE ANAHTARINIZLA DEĞİŞTİRİN
+              sitekey="6LfFwr8rAAAAAA-A5O_qOw7nTtkCbVIrfMXYxOCJ"
               onChange={onRecaptchaChange}
             />
             
