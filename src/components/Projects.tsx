@@ -1,68 +1,63 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Github, Filter, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, Filter, X, ChevronLeft, ChevronRight, Eye } from 'lucide-react'; // Eye ikonu eklendi
 import { useLanguage } from '../contexts/LanguageContext';
 import { optimizeImageUrl } from '../utils/imageOptimizer';
+// ... (Resim importlarınız aynı şekilde kalıyor)
+import arkaPerspektif from '../assets/2.4Ghz Antenna/arka_persfektif.png';
+import onYuz from '../assets/2.4Ghz Antenna/On_Yuz.png';
+import onBaski from '../assets/2.4Ghz Antenna/On_Baski.jpg';
 import arkaBaski from '../assets/2.4Ghz Antenna/Arka_baski.jpg';
+import s11 from '../assets/2.4Ghz Antenna/S1,1.png';
 import farfield from '../assets/2.4Ghz Antenna/Farfield.png';
-
-const PLACEHOLDER_PCBPNG = 'https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=400';
-const PLACEHOLDER_PCBJPG = 'https://images.pexels.com/photos/3825517/pexels-photo-3825517.jpeg?auto=compress&cs=tinysrgb&w=400';
-const PLACEHOLDER_ANTENNA = 'https://images.pexels.com/photos/3862370/pexels-photo-3862370.jpeg?auto=compress&cs=tinysrgb&w=400';
-const PLACEHOLDER_SOFTWARE = 'https://images.pexels.com/photos/3807517/pexels-photo-3807517.jpeg?auto=compress&cs=tinysrgb&w=400';
-
-const arkaPerspektif = PLACEHOLDER_ANTENNA;
-const onYuz = PLACEHOLDER_ANTENNA;
-const onBaski = PLACEHOLDER_ANTENNA;
-const s11 = PLACEHOLDER_ANTENNA;
-const AltiumDevreSema = PLACEHOLDER_PCBPNG;
-const AltiumPcb = PLACEHOLDER_PCBPNG;
-const DcMultisimDevre = PLACEHOLDER_PCBPNG;
-const DCBaskiOn = PLACEHOLDER_PCBPNG;
-const OlcumDC = PLACEHOLDER_PCBPNG;
-const Regulator = PLACEHOLDER_PCBPNG;
-const DpotAltiumPCB = PLACEHOLDER_PCBPNG;
-const DpotAltiumSema = PLACEHOLDER_PCBPNG;
-const DpotBaski = PLACEHOLDER_PCBPNG;
-const DpotDizgisizBaski = PLACEHOLDER_PCBPNG;
-const ComplexAnaArayuz = PLACEHOLDER_SOFTWARE;
-const ComplexArayuz = PLACEHOLDER_SOFTWARE;
-const ComplexKod = PLACEHOLDER_SOFTWARE;
-const MSP430AltiumPCB = PLACEHOLDER_PCBPNG;
-const MSP430AltiumSema = PLACEHOLDER_PCBPNG;
-const MSP430Baski = PLACEHOLDER_PCBPNG;
-const MSP430DizgisizBaski = PLACEHOLDER_PCBPNG;
-const MSP430Kod = PLACEHOLDER_SOFTWARE;
-const SESAltiumPcb = PLACEHOLDER_PCBPNG;
-const SESAltiumSema = PLACEHOLDER_PCBPNG;
-const SESBaski = PLACEHOLDER_PCBJPG;
-const SESDizgisizBaski = PLACEHOLDER_PCBPNG;
-const SESMultisimSema = PLACEHOLDER_PCBPNG;
-const STM32IdeArayuz = PLACEHOLDER_SOFTWARE;
-const STM32IdeKod = PLACEHOLDER_SOFTWARE;
-const STM32Uygulama = PLACEHOLDER_SOFTWARE;
-const Array4x4 = PLACEHOLDER_ANTENNA;
-const ArrayPoster = PLACEHOLDER_ANTENNA;
-const ArraySon1 = PLACEHOLDER_ANTENNA;
-const LibraryPatch = PLACEHOLDER_ANTENNA;
-const Pattern1 = PLACEHOLDER_ANTENNA;
-const HpFilterPCB1 = PLACEHOLDER_PCBPNG;
-const HpFilterPCB2 = PLACEHOLDER_PCBPNG;
-const HpFilterSheet = PLACEHOLDER_PCBPNG;
-const LpFilterPCB1 = PLACEHOLDER_PCBPNG;
-const LpFilterPCB2 = PLACEHOLDER_PCBPNG;
-const LpFilterSheet = PLACEHOLDER_PCBPNG;
-const BuckPCB1 = PLACEHOLDER_PCBJPG;
-const BuckPCB2 = PLACEHOLDER_PCBJPG;
-const BuckSheet = PLACEHOLDER_PCBJPG;
-const BoostPCB1 = PLACEHOLDER_PCBJPG;
-const BoostPCB2 = PLACEHOLDER_PCBJPG;
-const BoostSheet = PLACEHOLDER_PCBJPG;
-const ACDCadaptorPCB1 = PLACEHOLDER_PCBJPG;
-const ACDCadaptorPCB2 = PLACEHOLDER_PCBJPG;
-const ACDCadaptorSheet = PLACEHOLDER_PCBJPG;
-const STMRelayPcb1 = PLACEHOLDER_PCBPNG;
-const STMRelayPcb2 = PLACEHOLDER_PCBPNG;
-const STMRelaySheet = PLACEHOLDER_PCBPNG;
+import AltiumDevreSema from '../assets/DC Guc Kaynak/Altium_Devre_Sema.png';
+import AltiumPcb from '../assets/DC Guc Kaynak/Altium_pcb.png';
+import DcMultisimDevre from '../assets/DC Guc Kaynak/Dc_Multisim_Devre.png';
+import DCBaskiOn from '../assets/DC Guc Kaynak/DCBaski_on.png';
+import OlcumDC from '../assets/DC Guc Kaynak/OlcumDC.png';
+import Regulator from '../assets/DC Guc Kaynak/Regulator.png';
+import DpotAltiumPCB from '../assets/Pmod Dpot/Dpot_Altium_PCB.png';
+import DpotAltiumSema from '../assets/Pmod Dpot/Dpot_Altium_Sema.png';
+import DpotBaski from '../assets/Pmod Dpot/Dpot_Baski.png';
+import DpotDizgisizBaski from '../assets/Pmod Dpot/Dpot_Dizgisiz_Baski.png';
+import ComplexAnaArayuz from '../assets/Complex Convert/Complex_AnaArayuz.png';
+import ComplexArayuz from '../assets/Complex Convert/Complex_Arayuz.png';
+import ComplexKod from '../assets/Complex Convert/Complex_Kod.png';
+import MSP430AltiumPCB from '../assets/MSP430/MSP430_Altium_PCB.png';
+import MSP430AltiumSema from '../assets/MSP430/MSP430_Altium_Sema.png';
+import MSP430Baski from '../assets/MSP430/MSP430_baski.png';
+import MSP430DizgisizBaski from '../assets/MSP430/MSP430_Dizgisiz_baski.png';
+import MSP430Kod from '../assets/MSP430/MSP430_Kod.png';
+import SESAltiumPcb from '../assets/SES DC/SES_Altium_pcb.png';
+import SESAltiumSema from '../assets/SES DC/SES_Altium_Sema.png';
+import SESBaski from '../assets/SES DC/SES_Baski.jpg';
+import SESDizgisizBaski from '../assets/SES DC/SES_Dizgisiz_Baski.png';
+import SESMultisimSema from '../assets/SES DC/SES_Multisim_Sema.png';
+import STM32IdeArayuz from '../assets/Stm32Sayac/STM32_ide_arayuz.png';
+import STM32IdeKod from '../assets/Stm32Sayac/STM32_ide_kod.png';
+import STM32Uygulama from '../assets/Stm32Sayac/STM32_uygulamapng.png';
+import Array4x4 from '../assets/Array Antenna/4x4_0775_01.gif';
+import ArrayPoster from '../assets/Array Antenna/Array_Poster.png';
+import ArraySon1 from '../assets/Array Antenna/Array_son1.gif';
+import LibraryPatch from '../assets/Array Antenna/libraryPatch Antenna Array_01.gif';
+import Pattern1 from '../assets/Array Antenna/pattern1.png';
+import HpFilterPCB1 from '../assets/Lp and Hp Filter/Hp_Filter_PCB1.png';
+import HpFilterPCB2 from '../assets/Lp and Hp Filter/Hp_Filter_PCB2.png';
+import HpFilterSheet from '../assets/Lp and Hp Filter/Hp_Filter_Sheet.png';
+import LpFilterPCB1 from '../assets/Lp and Hp Filter/Lp_Filter_PCB1.png';
+import LpFilterPCB2 from '../assets/Lp and Hp Filter/Lp_Filter_PCB2.png';
+import LpFilterSheet from '../assets/Lp and Hp Filter/Lp_Filter_Sheet.png';
+import BuckPCB1 from '../assets/Buck and Boost Conv/Buck_PCB1.jpg';
+import BuckPCB2 from '../assets/Buck and Boost Conv/Buck_PCB2.jpg';
+import BuckSheet from '../assets/Buck and Boost Conv/Buck_Sheet.jpg';
+import BoostPCB1 from '../assets/Buck and Boost Conv/Boost_PCB1.jpg';
+import BoostPCB2 from '../assets/Buck and Boost Conv/Boost_PCB2.jpg';
+import BoostSheet from '../assets/Buck and Boost Conv/Boost_Sheet.jpg';
+import ACDCadaptorPCB1 from '../assets/ACDCadaptor/ACDCadaptor_PCB1.jpg';
+import ACDCadaptorPCB2 from '../assets/ACDCadaptor/ACDCadaptor_PCB2.jpg';
+import ACDCadaptorSheet from '../assets/ACDCadaptor/ACDCadaptor_Sheet.jpg';
+import STMRelayPcb1 from '../assets/STM Relay/STMRelay_Pcb1.png';
+import STMRelayPcb2 from '../assets/STM Relay/STMRelay_Pcb2.png';
+import STMRelaySheet from '../assets/STM Relay/STMRelay_Sheet.png';
 
 interface Project {
   id: string;
@@ -213,68 +208,67 @@ export const Projects: React.FC = () => {
       ]
     },
     {
-  id: 'lp-hp-filter',
-  title: t('projects.lpHpFilter.title'),
-  category: t('projects.pcb'),
-  technologies: ['Altium Designer', 'PCB design'],
-  description: t('projects.lpHpFilter.description'),
-  features: t('projects.lpHpFilter.features'),
-  image: HpFilterPCB2,
-  gallery: [
-    HpFilterPCB2,
-    HpFilterPCB1,
-    HpFilterSheet,
-    LpFilterPCB1,
-    LpFilterPCB2,
-    LpFilterSheet,
-  ]
-},
+      id: 'lp-hp-filter',
+      title: t('projects.lpHpFilter.title'),
+      category: t('projects.pcb'),
+      technologies: ['Altium Designer', 'PCB design'],
+      description: t('projects.lpHpFilter.description'),
+      features: t('projects.lpHpFilter.features'),
+      image: HpFilterPCB2,
+      gallery: [
+        HpFilterPCB2,
+        HpFilterPCB1,
+        HpFilterSheet,
+        LpFilterPCB1,
+        LpFilterPCB2,
+        LpFilterSheet,
+      ]
+    },
     {
-  id: 'buck-boost-converter',
-  title: t('projects.buckBoost.title'),
-  category: t('projects.pcb'),
-  technologies: ['Altium Designer', 'Power Electronics', 'Simülasyon'],
-  description: t('projects.buckBoost.description'),
-  features: t('projects.buckBoost.features'),
-  image: BuckPCB2, // Proje kartında görünecek ana görsel
-  gallery: [
-    BuckPCB2,
-    BuckPCB1,
-    BuckSheet,
-    BoostPCB1,
-    BoostPCB2,
-    BoostSheet
-  ]
-},
+      id: 'buck-boost-converter',
+      title: t('projects.buckBoost.title'),
+      category: t('projects.pcb'),
+      technologies: ['Altium Designer', 'Power Electronics', 'Simülasyon'],
+      description: t('projects.buckBoost.description'),
+      features: t('projects.buckBoost.features'),
+      image: BuckPCB2, 
+      gallery: [
+        BuckPCB2,
+        BuckPCB1,
+        BuckSheet,
+        BoostPCB1,
+        BoostPCB2,
+        BoostSheet
+      ]
+    },
     {
-  id: 'ac-dc-adaptor',
-  title: t('projects.acDcAdaptor.title'),
-  category: t('projects.pcb'),
-  technologies: ['Altium Designer', 'SMPS Design', 'Flyback Topology'],
-  description: t('projects.acDcAdaptor.description'),
-  features: t('projects.acDcAdaptor.features'),
-  image: ACDCadaptorPCB1,
-  gallery: [
-    ACDCadaptorPCB1,
-    ACDCadaptorPCB2,
-    ACDCadaptorSheet
-  ]
-},
+      id: 'ac-dc-adaptor',
+      title: t('projects.acDcAdaptor.title'),
+      category: t('projects.pcb'),
+      technologies: ['Altium Designer', 'SMPS Design', 'Flyback Topology'],
+      description: t('projects.acDcAdaptor.description'),
+      features: t('projects.acDcAdaptor.features'),
+      image: ACDCadaptorPCB1,
+      gallery: [
+        ACDCadaptorPCB1,
+        ACDCadaptorPCB2,
+        ACDCadaptorSheet
+      ]
+    },
     {
-  id: 'stm-relay-control',
-  title: t('projects.stmRelay.title'),
-  category: t('projects.pcb'),
-  technologies: ['STM32', 'Relay Control', 'Wireless Communication', 'PCB Design', 'Altium Designer'],
-  description: t('projects.stmRelay.description'),
-  features: t('projects.stmRelay.features'),
-  image: STMRelayPcb1,
-  gallery: [
-    STMRelayPcb1,
-    STMRelayPcb2,
-    STMRelaySheet
-  ]
-}
-  
+      id: 'stm-relay-control',
+      title: t('projects.stmRelay.title'),
+      category: t('projects.pcb'),
+      technologies: ['STM32', 'Relay Control', 'Wireless Communication', 'PCB Design', 'Altium Designer'],
+      description: t('projects.stmRelay.description'),
+      features: t('projects.stmRelay.features'),
+      image: STMRelayPcb1,
+      gallery: [
+        STMRelayPcb1,
+        STMRelayPcb2,
+        STMRelaySheet
+      ]
+    }
   ];
 
   const categories = [t('common.all'), t('projects.pcb'), t('projects.embedded'), t('projects.software'), t('projects.antenna')];
@@ -377,7 +371,8 @@ export const Projects: React.FC = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+              // "group" sınıfı eklendi. Bu, hover durumunu alt elementlere iletmek için gereklidir.
+              className="group bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
               onClick={() => {
                 setSelectedProject(project);
                 setCurrentSlide(0);
@@ -391,8 +386,20 @@ export const Projects: React.FC = () => {
                   className="w-full h-full object-cover"
                   loading="lazy"
                 />
+                
+                {/* Mevcut Gradient katmanı */}
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
-                <div className="absolute bottom-4 left-4">
+
+                {/* YENİ EKLENEN KISIM: Click to View Animasyonu */}
+                {/* group-hover:opacity-100 ile parent üzerine gelindiğinde görünür olur */}
+                <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center z-10">
+                    <div className="transform translate-y-4 group-hover:translate-y-0 transition-transform duration-300 flex flex-col items-center text-white">
+                        <Eye className="w-8 h-8 mb-2" />
+                        <span className="font-semibold text-sm">Click to View</span>
+                    </div>
+                </div>
+
+                <div className="absolute bottom-4 left-4 z-20">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
                     {project.category}
                   </span>
