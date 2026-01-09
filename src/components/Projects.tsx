@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { ExternalLink, Github, Filter, X, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ExternalLink, Github, Filter, X, ChevronLeft, ChevronRight, Expand } from 'lucide-react';
 import { useLanguage } from '../contexts/LanguageContext';
 import { optimizeImageUrl } from '../utils/imageOptimizer';
 import arkaBaski from '../assets/2.4Ghz Antenna/Arka_baski.jpg';
@@ -78,13 +78,17 @@ interface Project {
 }
 
 export const Projects: React.FC = () => {
-  const { t } = useLanguage();
+  const { t, language } = useLanguage();
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
   const [selectedCategory, setSelectedCategory] = useState(t('common.all'));
   const [currentSlide, setCurrentSlide] = useState(0);
   const touchStartX = useRef<number | null>(null);
   const slidesContainerRef = useRef<HTMLDivElement | null>(null);
   const modalRef = useRef<HTMLDivElement | null>(null);
+
+  useEffect(() => {
+    setSelectedCategory(t('common.all'));
+  }, [language, t]);
 
   const projects: Project[] = [
     {
@@ -377,21 +381,36 @@ export const Projects: React.FC = () => {
           {filteredProjects.map((project, index) => (
             <div
               key={project.id}
-              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer"
+              className="bg-gray-50 dark:bg-gray-800 rounded-xl overflow-hidden shadow-lg hover:shadow-2xl transform hover:scale-105 transition-all duration-300 cursor-pointer group"
               onClick={() => {
                 setSelectedProject(project);
                 setCurrentSlide(0);
               }}
               style={{ animationDelay: `${index * 0.1}s` }}
+              role="button"
+              tabIndex={0}
+              onKeyDown={(e) => {
+                if (e.key === 'Enter' || e.key === ' ') {
+                  setSelectedProject(project);
+                  setCurrentSlide(0);
+                }
+              }}
+              aria-label={`Click to view ${project.title} project details`}
             >
               <div className="relative h-48 overflow-hidden">
                 <img
                   src={project.image}
                   alt={project.title}
-                  className="w-full h-full object-cover"
+                  className="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110"
                   loading="lazy"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent"></div>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent group-hover:from-black/70 transition-all duration-300"></div>
+                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                  <div className="flex flex-col items-center gap-2">
+                    <Expand className="w-10 h-10 text-white drop-shadow-lg" />
+                    <span className="text-white text-sm font-medium drop-shadow-lg">Click to view</span>
+                  </div>
+                </div>
                 <div className="absolute bottom-4 left-4">
                   <span className="px-3 py-1 bg-blue-600 text-white text-sm rounded-full">
                     {project.category}
