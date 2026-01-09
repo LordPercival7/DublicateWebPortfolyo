@@ -1,6 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { Award, Calendar, ExternalLink, Filter, Download, X } from 'lucide-react';
-import YnlendirmeAnimasyonu from '../assets/Array Antenna/ynlendirme-animasyonu-resize.gif';
 import { useLanguage } from '../contexts/LanguageContext';
 
 interface Certificate {
@@ -51,7 +50,7 @@ export const Certificates: React.FC = () => {
       category: 'Araştırma',
       description: 'Faz dizinli mikroşerit antenlerde hüzme yönlendirme üzerine yapılan ve ileri simülasyon araçlarının kullanıldığı lisans tez projemin tamamlanması',
       downloadUrl: '/Tez/Burak GOKCEK-Bitirme Tezi.pdf',
-      image: YnlendirmeAnimasyonu,
+      image: 'https://images.pexels.com/photos/3862370/pexels-photo-3862370.jpeg?auto=compress&cs=tinysrgb&w=400',
     }
   ];
 
